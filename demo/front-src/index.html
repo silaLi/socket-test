@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="http://cdn.bootcss.com/socket.io/1.4.8/socket.io.min.js"></script>
+	
+</head>
+<body>
+	test beat 
+	<div id="socketid"></div>
+	<div id="time"></div>
+	<div id="fail"></div>
+</body>
+<script type="text/template">
+	setInterval(function(){
+		var now = new Date();
+		time_el.textContent = now.getHours() + ':' + now.getMinutes() + ' ' + now.getSeconds();
+	}, 1000);
+	
+
+	sio.on('aaa', function(data){
+		console.log(sio)
+		alert(data);
+	});
+	var pervEvent = null;
+	function showMsg(msg){
+		if (pervEvent == msg) {
+			return;
+		}
+		pervEvent = msg;
+		var div = document.createElement('div');
+		div.textContent = msg;
+		document.body.appendChild(div);
+	}
+</script>
+<!-- <script type="text/javascript" src="demo/1/test.js"></script> -->
+<script type="text/javascript" src="demo/2/test.js"></script>
+</html>

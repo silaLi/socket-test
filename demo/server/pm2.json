@@ -1,0 +1,14 @@
+{
+    "apps": [{
+        "name": "app",
+        "script": "app.js",
+        "args": "",
+        "force": true,
+        "watch": true,
+        "exec_mode": "fork",
+        "error_file": "./log/app.log",
+        "out_file": "./log/app.log",
+        "pid_file": "./tmp/app.pid",
+        "ignore_watch" : ["node_modules", "front-src", "database", "log", "tmp"]
+    }]
+}
