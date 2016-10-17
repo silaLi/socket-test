@@ -12,4 +12,4 @@
 2、断开链接，服务器端和客户端同时触发disconnect，客户端继续触发reconnecting->reconnect->connect
 3、网络断开，服务端不会触发任何事件，客户端触发disconnect->reconnecting->reconnect->reconnect->reconnect(次数不定，至少1次)->connect
 
-[测试代码](http://www.baidu.com "github")
+[测试代码](https://github.com/silaLi/socket-test "github")
